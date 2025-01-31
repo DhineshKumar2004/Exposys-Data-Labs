@@ -240,7 +240,7 @@ body{
     }
 }
 
-@media (max-width:360px){
+@media (max-width:380px){
     .img1-content>.img1,
     .img2-content>.img2{
         width: 200px;
@@ -250,6 +250,10 @@ body{
 
     .service-img{
         width: 250px;
+    }
+    .cart-img{
+        width: 200px;
+        border-radius: 10px;
     }
 }
 
@@ -638,8 +642,8 @@ footer>.footer>div>a>img{
     margin-bottom: 20px;
 }
 
-.cart-item>img{
-    width: 300px;
+.cart-img{
+    width: 250px;
     border-radius: 10px;
 }
 

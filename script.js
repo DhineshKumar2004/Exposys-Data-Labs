@@ -171,7 +171,7 @@ function loadCart() {
   
     cartContainer.innerHTML = cart.map(course => `
       <div class="cart-item">
-        <img src="${course.image} "alt="">
+        <img class="cart-img" src="${course.image} "alt="">
         <h3>${course.title}</h3>
         <p>${course.description}</p><br>
         <span style="color: black;">Price: ₹${course.price}</span><br>
