@@ -135,10 +135,6 @@ body{
     .why-us{
         flex-direction: column-reverse;
     }
-
-    .service-img{
-        justify-content: center;
-    }
     .services{
         flex-direction: column;
     }
@@ -171,13 +167,27 @@ body{
         height: 400px;
         justify-content: center;
     }
+
+   .service-img{
+        width: 300px;
+    }
+}
+
+@media (max-width:520px){
+    .why-us>.service-img,
+    .services>.service-img{
+        width: 250px;
+    }
 }
 @media (max-width:470px){
     .img1-content>.img1,
     .img2-content>.img2{
-        width: 300px;
+        width: 400px;
         height: 300px;
         justify-content: center;
+    }
+    .service-img{
+        width: 300px;
     }
 }
 @media (max-width:360px){
@@ -186,6 +196,10 @@ body{
         width: 200px;
         height: 200px;
         justify-content: center;
+    }
+
+    .service-img{
+        width: 250px;
     }
 }
 
@@ -300,9 +314,8 @@ p{
 }
 
 @media(max-width:1020px){
-    .why-us>.service-img,
-    .services>.service-img{
-        width: 400px;
+    .service-img{
+        width: 450px;
         margin-top: 90px;
     }
 }
@@ -380,7 +393,7 @@ footer>.footer>div>a>img{
     text-indent: 50px;
 }
 
-.why-us>img{
+.service-img{
     width: 500px;
     height: 100%;
     border-radius: 50px;
@@ -394,7 +407,7 @@ footer>.footer>div>a>img{
     gap: 30px;
 }
 
-.services>img{
+.service-img{
     width: 500px;
     height: 100%;
     border-radius: 50px;
