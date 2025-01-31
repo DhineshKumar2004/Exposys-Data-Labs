@@ -21,7 +21,7 @@ const links = document.querySelectorAll('.links');
 links.forEach(link => {
     const linkPath = new URL(link.href).pathname; 
     
-    if(currentPage.endsWith(linkPath)){
+    if(currentPage.endsWith(linkPath)|| (currentPage === '/' && linkPath.endsWith('index.html'))){
         link.classList.add('active');
         
     }
