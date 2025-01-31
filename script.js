@@ -17,14 +17,13 @@ closeIcon.addEventListener('click', () => {
 
 //currentPage Highlight
 const currentPage = window.location.pathname;
-console.log(currentPage);
 const links = document.querySelectorAll('.links');
 links.forEach(link => {
-    if (link.href.includes(currentPage)) {
+    const linkPath = new URL(link.href).pathname; 
+    
+    if(currentPage.endsWith(linkPath)){
         link.classList.add('active');
-    }
-    else{
-        link.classList.remove('active');
+        
     }
 });
 
