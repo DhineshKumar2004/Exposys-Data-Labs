@@ -40,6 +40,9 @@ const modeIcon = document.getElementById('mode-icon');
 const about = document.querySelector('#about');
 const span = document.querySelectorAll('.spans');
 const bolds = document.querySelectorAll('.bold');
+const service = document.querySelectorAll('.service');
+const courses = document.querySelectorAll('.course');
+const clients = document.querySelectorAll('.client');
 
 
 //  Function to toggle dark mode
@@ -55,6 +58,18 @@ function toggleMode() {
         about.classList.toggle('light-mode-font-color');
         section1.classList.toggle('light-mode-font-color');
     }
+
+    service.forEach(service =>{
+        service.classList.toggle('light-mode-service-color');
+    });
+
+    courses.forEach(course => {
+        course.classList.toggle('light-mode-service-color');
+    })
+
+    clients.forEach(client =>{
+        client.classList.toggle('light-mode-font-color')
+    })
 
     // Save user preference in localStorage
     const isLightMode = body.classList.contains('light-mode-bg-color');
