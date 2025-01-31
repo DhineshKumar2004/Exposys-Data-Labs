@@ -1,0 +1,146 @@
+[
+  {
+      "id": 1,
+      "title": "Full-Stack Web Development",
+      "image": "images/webdev.png",
+      "description": "Master front-end and back-end development with HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build real-world projects and become a full-stack developer.",
+      "published_date": "2024-01-15",
+      "price": 3500
+  },
+  {
+      "id": 2,
+      "title": "Cybersecurity & Ethical Hacking",
+      "image": "images/cybersecurity.jpg",
+      "description": "Learn penetration testing, network security, cryptography, and ethical hacking techniques to protect systems from cyber threats.",
+      "published_date": "2023-12-10",
+      "price": 4000
+  },
+  {
+      "id": 3,
+      "title": "Cloud Computing with AWS & Azure",
+      "image": "images/cloud-computing.png",
+      "description": "Understand cloud infrastructure, deployment models, serverless computing, and security best practices using AWS, Azure, and Google Cloud.",
+      "published_date": "2023-11-20",
+      "price": 3000
+  },
+  {
+      "id": 4,
+      "title": "Data Science & Machine Learning",
+      "image": "images/datascience.webp",
+      "description": "Gain hands-on experience in data analysis, machine learning, Python, TensorFlow, and artificial intelligence with real-world projects.",
+      "published_date": "2024-02-05",
+      "price": 4500
+  },
+  {
+      "id": 5,
+      "title": "UI/UX Design & Prototyping",
+      "image": "images/ui-ux.avif",
+      "description": "Learn user research, wireframing, Figma, Adobe XD, and design thinking principles to create intuitive user interfaces.",
+      "published_date": "2024-01-25",
+      "price": 2500
+  },
+  {
+      "id": 6,
+      "title": "DevOps & CI/CD Pipelines",
+      "image": "images/devops.jpg",
+      "description": "Master Kubernetes, Docker, Jenkins, and CI/CD automation techniques to streamline software deployment processes.",
+      "published_date": "2023-10-18",
+      "price": 3800
+  },
+  {
+      "id": 7,
+      "title": "Python Programming",
+      "image": "images/python.jpg",
+      "description": "Learn Python from basics to advanced topics, including data structures, OOP, web development with Flask/Django, and automation.",
+      "published_date": "2023-09-30",
+      "price": 2200
+  },
+  {
+      "id": 8,
+      "title": "Java Programming",
+      "image": "images/java.avif",
+      "description": "Master Java programming with object-oriented concepts, data structures, Spring Boot, and enterprise application development.",
+      "published_date": "2024-02-12",
+      "price": 3300
+  },
+  {
+      "id": 9,
+      "title": "JavaScript & Modern Frameworks",
+      "image": "images/javascript.jpg",
+      "description": "Deep dive into JavaScript ES6+, React, Angular, Vue.js, and backend development with Node.js.",
+      "published_date": "2023-08-15",
+      "price": 2700
+  },
+  {
+      "id": 10,
+      "title": "C & C++ Programming",
+      "image": "images/cpp.avif",
+      "description": "Learn C and C++ programming with data structures, memory management, game development, and competitive programming techniques.",
+      "published_date": "2023-07-10",
+      "price": 1900
+  },
+  {
+      "id": 11,
+      "title": "Artificial Intelligence & Deep Learning",
+      "image": "images/ai.jpg",
+      "description": "Explore neural networks, deep learning, NLP, computer vision, and AI-powered applications using Python and TensorFlow.",
+      "published_date": "2024-03-01",
+      "price": 4700
+  },
+  {
+      "id": 12,
+      "title": "Android App Development",
+      "image": "images/android.jpg",
+      "description": "Build mobile applications using Java/Kotlin and Jetpack Compose, and publish them on the Google Play Store.",
+      "published_date": "2023-06-25",
+      "price": 3300
+  },
+  {
+      "id": 13,
+      "title": "iOS App Development",
+      "image": "images/ios.jpg",
+      "description": "Develop iOS applications using Swift and SwiftUI, integrating Apple APIs and best UI/UX practices.",
+      "published_date": "2024-02-20",
+      "price": 4200
+  },
+  {
+      "id": 14,
+      "title": "Blockchain Development",
+      "image": "images/blockchain.jpg",
+      "description": "Learn the fundamentals of blockchain, smart contracts, Ethereum, and developing decentralized applications (DApps).",
+      "published_date": "2023-05-15",
+      "price": 3500
+  },
+  {
+      "id": 15,
+      "title": "Game Development with Unity",
+      "image": "images/game-dev.avif",
+      "description": "Create interactive games using Unity and C#, covering 2D/3D game physics, AI, and multiplayer networking.",
+      "published_date": "2024-01-07",
+      "price": 2900
+  },
+  {
+      "id": 16,
+      "title": "Big Data & Hadoop",
+      "image": "images/big-data.jpg",
+      "description": "Understand big data technologies like Hadoop, Spark, and data lakes to process massive datasets efficiently.",
+      "published_date": "2023-04-28",
+      "price": 3600
+  },
+  {
+      "id": 17,
+      "title": "SQL & Database Management",
+      "image": "images/sql.avif",
+      "description": "Master SQL queries, relational database management, PostgreSQL, MySQL, and NoSQL databases like MongoDB.",
+      "published_date": "2024-02-08",
+      "price": 2500
+  },
+  {
+      "id": 18,
+      "title": "Networking & System Administration",
+      "image": "images/networking.jpg",
+      "description": "Learn network configuration, system security, Linux administration, and server management techniques.",
+      "published_date": "2023-11-05",
+      "price": 4100
+  }
+]
