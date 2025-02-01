@@ -2,6 +2,9 @@ const menu = document.getElementById('menu-id');
 const menuIcon = document.getElementById('menu-icon');
 const closeIcon = document.getElementById('close-icon');
 
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+document.querySelector('.cart-count').innerHTML = cart.length;
+
 menuIcon.addEventListener('click', () => {
     menu.style.display = "flex";
     menuIcon.style.display = "none";
