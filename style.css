@@ -626,6 +626,14 @@ footer>.footer>div>a>img{
     .course-container {
         flex: 1 1 100%; /* Full width */
     }
+
+    .course-container p {
+        height: 200px;
+    }
+
+    .course-container h2{
+        height: 100px;
+    }
 }
 
 /* cart page */
