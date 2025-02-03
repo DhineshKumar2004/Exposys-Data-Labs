@@ -268,7 +268,7 @@ if(currentPage.includes('contact')){
         email.value='';
         number.value='';
         menuIcon.value='';
-        messageValue.value='';
+        message.value='';
     
         submitted.style.display='block';
         setTimeout(()=>{
