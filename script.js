@@ -256,6 +256,12 @@ if (currentPage.includes('contact')) {
         const emailValue = email.value.trim();
         const number = document.getElementById('phone');
         const numberValue = number.value.trim();
+        if(numberValue.length<10){
+            alert("Mobile number not valid");
+            number.value='';
+            number.focus();
+            return
+        }
         const message = document.getElementById('message');
         const messageValue = message.value.trim();
         e.preventDefault();
