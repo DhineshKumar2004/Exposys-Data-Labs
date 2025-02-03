@@ -216,7 +216,7 @@ function removeFromCart(courseId) {
 // careers page
 
 console.log(currentPage);
-if (currentPage.includes('careers.html')) {
+if (currentPage.includes('careers')) {
     jobFetch();
     const jobSection = document.querySelector('.openings');
 
