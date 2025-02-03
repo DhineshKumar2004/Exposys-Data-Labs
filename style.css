@@ -255,7 +255,11 @@ body{
         width: 280px;
     }
 }
-
+@media(max-width:400px){
+    .form-grp>form>.grp{
+        width: 260px;
+    }
+}
 @media (max-width:380px){
     .img1-content>.img1,
     .img2-content>.img2{
@@ -272,12 +276,9 @@ body{
         border-radius: 10px;
     }
     .form-grp>form>.grp{
-        width: 200px;
+        width: 250px;
     }
 }
-
-
-
 
 .section1{
     color: rgb(255, 255, 255);
