@@ -646,8 +646,13 @@ footer>.footer>div>a>img{
 .cart-item{
     border: 1px solid #ccc;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    background-color: #cdcdcd;
+}
+
+.cart-item p {
+    color: #3c3939;
 }
 
 .cart-img{
@@ -660,6 +665,7 @@ footer>.footer>div>a>img{
     margin-top: 50px;
     font-weight: 500;
     font-size: 20px;
+    color: #757474;
 }
 
 .buy-btn{

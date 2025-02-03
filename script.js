@@ -20,7 +20,6 @@ closeIcon.addEventListener('click', () => {
 
 //currentPage Highlight
 const currentPage = window.location.pathname;
-console.log(currentPage);
 const links = document.querySelectorAll('.links');
 links.forEach(link => {
     const linkPath = new URL(link.href).pathname;
@@ -62,7 +61,7 @@ function toggleMode() {
     span.forEach(span => span.classList.toggle('light-mode-font-color'));
     bolds.forEach(bold => bold.classList.toggle('light-mode-font-color'));
 
-    if (currentPage.includes('index.html') || currentPage === '/') {
+    if (currentPage.includes('index') || currentPage === '/') {
         about.classList.toggle('light-mode-font-color');
         section1.classList.toggle('light-mode-font-color');
     }
@@ -79,7 +78,7 @@ function toggleMode() {
         client.classList.toggle('light-mode-font-color');
     })
 
-    if (currentPage.includes('careers.html')) {
+    if (currentPage.includes('careers')) {
         careers.classList.toggle('light-mode-font-color');
     }
 
@@ -136,7 +135,6 @@ function fetchCourses(courseContainer) {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
                 const courseId = event.target.dataset.id;
-                console.log(courseId);
                 addToCart(courseId, data);
             });
         });
@@ -172,7 +170,7 @@ function loadCart() {
     }
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    console.log(cart);
+
 
     if (cart.length === 0) {
         cartContainer.innerHTML = "<p>Your cart is empty</p>";
@@ -210,12 +208,12 @@ function removeFromCart(courseId) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart = cart.filter(course => course.id != courseId);
     localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart(); // Reload cart after removal
+    location.reload();
+    loadCart();
 }
 
 // careers page
 
-console.log(currentPage);
 if (currentPage.includes('careers')) {
     jobFetch();
     const jobSection = document.querySelector('.openings');
