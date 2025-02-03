@@ -267,7 +267,6 @@ if(currentPage.includes('contact')){
         form.value='';
         email.value='';
         number.value='';
-        menuIcon.value='';
         message.value='';
     
         submitted.style.display='block';
