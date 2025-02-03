@@ -678,6 +678,56 @@ footer>.footer>div>a>img{
     opacity: .7;
 }
 
+/* careers page */
+
+.careers{
+    margin: 50px;
+    flex-direction: column;
+    gap: 30px;
+    display: flex;
+}
+
+.careers p{
+    padding-top: 10px;
+}
+
+.careers p{
+    margin-bottom: 0px;
+}
+
+.careers h1{
+    letter-spacing: normal;
+    font-size: 25px;
+}
+
+.bolds{
+    color: white;
+}
+.careers>.join>.spans{
+    padding-top: 10px;
+}
+
+.openings{
+    background-color: #ccc;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 121px 7px rgba(0,0,0,0.75);
+}
+
+.openings p{
+    color: black;
+}
+
+.apply{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+hr{
+    border-top: 1px solid black;
+    margin-bottom: 20px;
+}
+
 
 
 

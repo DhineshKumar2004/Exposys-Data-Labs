@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "title": "Frontend Developer",
+        "location": "Remote",
+        "type": "Full-Time",
+        "description": "We are looking for a skilled Frontend Developer with experience in HTML, CSS, JavaScript, and React.js.",
+        "requirements": [
+            "Strong knowledge of JavaScript and modern frameworks",
+            "Experience with responsive web design",
+            "Familiarity with REST APIs and state management",
+            "Ability to work in an Agile environment"
+        ],
+        "apply_link": "apply/frontend-developer"
+    },
+    {
+        "id": 2,
+        "title": "Backend Developer",
+        "location": "Bangalore, India",
+        "type": "Full-Time",
+        "description": "Join our backend team to build scalable APIs and databases. Experience with Node.js and MongoDB is preferred.",
+        "requirements": [
+            "Proficiency in Node.js and Express.js",
+            "Experience with databases like MongoDB or PostgreSQL",
+            "Understanding of authentication and security best practices",
+            "Ability to optimize API performance"
+        ],
+        "apply_link": "apply/backend-developer"
+    },
+    {
+        "id": 3,
+        "title": "UI/UX Designer",
+        "location": "Remote",
+        "type": "Part-Time",
+        "description": "Looking for a creative UI/UX designer proficient in Figma, Adobe XD, and wireframing tools.",
+        "requirements": [
+            "Experience with UI/UX tools like Figma, Adobe XD",
+            "Ability to create wireframes and high-fidelity designs",
+            "Understanding of user-centered design principles",
+            "Basic knowledge of HTML & CSS is a plus"
+        ],
+        "apply_link": "apply/uiux-designer"
+    },
+    {
+        "id": 4,
+        "title": "Cybersecurity Analyst",
+        "location": "Chennai, India",
+        "type": "Full-Time",
+        "description": "We need a cybersecurity expert to monitor, analyze, and enhance our security infrastructure.",
+        "requirements": [
+            "Knowledge of network security protocols",
+            "Experience with penetration testing and threat analysis",
+            "Familiarity with security compliance standards (ISO, GDPR)",
+            "Ability to respond to security incidents quickly"
+        ],
+        "apply_link": "apply/cybersecurity-analyst"
+    },
+    {
+        "id": 5,
+        "title": "DevOps Engineer",
+        "location": "Hyderabad, India",
+        "type": "Full-Time",
+        "description": "We are hiring a DevOps Engineer to manage CI/CD pipelines and infrastructure automation.",
+        "requirements": [
+            "Experience with Kubernetes and Docker",
+            "Proficiency in CI/CD tools like Jenkins or GitHub Actions",
+            "Understanding of cloud platforms (AWS, Azure, GCP)",
+            "Infrastructure as Code (IaC) experience with Terraform or Ansible"
+        ],
+        "apply_link": "apply/devops-engineer"
+    }
+]

@@ -20,13 +20,14 @@ closeIcon.addEventListener('click', () => {
 
 //currentPage Highlight
 const currentPage = window.location.pathname;
+console.log(currentPage);
 const links = document.querySelectorAll('.links');
 links.forEach(link => {
-    const linkPath = new URL(link.href).pathname; 
-    
-    if(currentPage.endsWith(linkPath)|| (currentPage === '/' && linkPath.endsWith('index.html'))){
+    const linkPath = new URL(link.href).pathname;
+
+    if (currentPage.endsWith(linkPath) || (currentPage === '/' && linkPath.endsWith('index.html'))) {
         link.classList.add('active');
-        
+
     }
 });
 
@@ -46,6 +47,10 @@ const bolds = document.querySelectorAll('.bold');
 const service = document.querySelectorAll('.service');
 const courses = document.querySelectorAll('.course');
 const clients = document.querySelectorAll('.client');
+const careers = document.getElementById('careers');
+
+
+
 
 
 //  Function to toggle dark mode
@@ -62,7 +67,7 @@ function toggleMode() {
         section1.classList.toggle('light-mode-font-color');
     }
 
-    service.forEach(service =>{
+    service.forEach(service => {
         service.classList.toggle('light-mode-service-color');
     });
 
@@ -70,9 +75,14 @@ function toggleMode() {
         course.classList.toggle('light-mode-service-color');
     })
 
-    clients.forEach(client =>{
-        client.classList.toggle('light-mode-font-color')
+    clients.forEach(client => {
+        client.classList.toggle('light-mode-font-color');
     })
+
+    if (currentPage.includes('careers.html')) {
+        careers.classList.toggle('light-mode-font-color');
+    }
+
 
     // Save user preference in localStorage
     const isLightMode = body.classList.contains('light-mode-bg-color');
@@ -97,23 +107,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if we're on the course page before fetching courses
     const courseContainer = document.querySelector(".container");
     if (courseContainer) {
-      fetchCourses(courseContainer);
+        fetchCourses(courseContainer);
     }
-  
+
     // Check if we're on the cart page before loading cart items
     const cartContainer = document.querySelector(".cart-container");
     if (cartContainer) {
-      loadCart();
+        loadCart();
     }
-  });
+});
 
 let datas = [];
 
-function fetchCourses (courseContainer){
-    fetch('course.json').then((res)=> res.json()).then((data=>{
-    datas = data;
-    datas.forEach(data =>{
-        courseContainer.innerHTML+= `<div class="course-container">
+function fetchCourses(courseContainer) {
+    fetch('course.json').then((res) => res.json()).then((data => {
+        datas = data;
+        datas.forEach(data => {
+            courseContainer.innerHTML += `<div class="course-container">
             <img src="${data.image} "alt="">
             <h2>${data.title}</h2>
             <p>${data.description}</p><br>
@@ -121,29 +131,29 @@ function fetchCourses (courseContainer){
             <a href="#"><button class="btn add-to-cart" data-id=${data.id}>Add to cart</button></a>
             <h5 style="color:#ccc;">Published on ${data.published_date}</h5>
         </div>`;
-    });
-    document.querySelectorAll('.add-to-cart').forEach(button =>{
-        button.addEventListener('click', (event)=>{
-            event.preventDefault();
-            const courseId = event.target.dataset.id;
-            console.log(courseId);
-            addToCart(courseId, data);
         });
-    });
-}));
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const courseId = event.target.dataset.id;
+                console.log(courseId);
+                addToCart(courseId, data);
+            });
+        });
+    }));
 }
 
-function addToCart(courseId, courses){
-    let cart = JSON.parse(localStorage.getItem("cart"))|| [];
+function addToCart(courseId, courses) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartCount = document.querySelector('.cart-count');
-    cartCount.innerHTML = cart.length+1;
+    cartCount.innerHTML = cart.length + 1;
     if (!cart.some(course => course.id == courseId)) {
         const selectedCourse = courses.find(course => course.id == courseId);
         cart.push(selectedCourse);
         localStorage.setItem("cart", JSON.stringify(cart));
-    
+
         alert(`${selectedCourse.title} added to cart!`);
-    } 
+    }
     else {
         alert("Course already in cart!");
     }
@@ -155,7 +165,7 @@ function loadCart() {
     const totalPrice = document.querySelector(".total");
     const buyNowBtn = document.querySelector(".buy-btn");
     let totalCost = 0;
-  
+
 
     if (!cartContainer) {
         return; // Stop function execution if the cart container is not found
@@ -165,13 +175,13 @@ function loadCart() {
     console.log(cart);
 
     if (cart.length === 0) {
-      cartContainer.innerHTML = "<p>Your cart is empty</p>";
-      totalPrice.innerHTML='';
-      buyNowBtn.style.display="none";
+        cartContainer.innerHTML = "<p>Your cart is empty</p>";
+        totalPrice.innerHTML = '';
+        buyNowBtn.style.display = "none";
 
-      return;
+        return;
     }
-  
+
     cartContainer.innerHTML = cart.map(course => `
       <div class="cart-item">
         <img class="cart-img" src="${course.image} "alt="">
@@ -182,26 +192,60 @@ function loadCart() {
       </div>
     `).join("");
 
-    cart.forEach((cart)=>{
-        totalCost+=cart.price;
-        totalPrice.innerHTML=`Total Cost: ₹${totalCost}`;
+    cart.forEach((cart) => {
+        totalCost += cart.price;
+        totalPrice.innerHTML = `Total Cost: ₹${totalCost}`;
     });
-  
+
     // Remove button event listeners
     document.querySelectorAll(".remove-from-cart").forEach(button => {
-      button.addEventListener("click", (event) => {
-        const courseId = event.target.dataset.id;
-        removeFromCart(courseId);
-      });
+        button.addEventListener("click", (event) => {
+            const courseId = event.target.dataset.id;
+            removeFromCart(courseId);
+        });
     });
-  }
-
-  function removeFromCart(courseId) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart = cart.filter(course => course.id != courseId);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  loadCart(); // Reload cart after removal
 }
+
+function removeFromCart(courseId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(course => course.id != courseId);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart(); // Reload cart after removal
+}
+
+// careers page
+
+
+if (currentPage.includes('careers.html')) {
+    jobFetch();
+    const jobSection = document.querySelector('.openings');
+
+    let jobDetails = [];
+
+    function jobFetch() {
+        fetch('jobs.json').then((res) => res.json()).then((data) => {
+            jobDetails = data;
+            
+            jobDetails.forEach(job => {
+                jobSection.innerHTML += `
+                
+                    <h1>${job.id}. ${job.title}</h1>
+                    <p><strong>Location:</strong> ${job.location}</p>
+                    <p><strong>Type:</strong> ${job.type}</p>
+                    <p><strong>Description:</strong> ${job.description}</p>
+                    <p><strong>Requirements</strong></p>
+                    <li>${job.requirements[0]}</li>
+                    <li>${job.requirements[1]}</li>
+                    <li>${job.requirements[2]}</li>
+                    <li>${job.requirements[3]}</li><br>
+                    <a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSe690OuSNB_8Ba26Skpflweojxq8Zn5J6h-3CLKaKEvwLBnpw/viewform?usp=header">Apply here</a><br><br>
+                    <hr>
+            `
+            });
+        });
+    }
+}
+
 
 
 
