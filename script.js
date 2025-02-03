@@ -223,7 +223,7 @@ if (currentPage.includes('careers')) {
     function jobFetch() {
         fetch('jobs.json').then((res) => res.json()).then((data) => {
             jobDetails = data;
-            
+
             jobDetails.forEach(job => {
                 jobSection.innerHTML += `
                 
@@ -248,8 +248,8 @@ if (currentPage.includes('careers')) {
 // contact page
 const submitBtn = document.getElementById("submit-btn");
 const submitted = document.querySelector('.submitted');
-if(currentPage.includes('contact')){
-    submitBtn.addEventListener('click', (e)=>{
+if (currentPage.includes('contact')) {
+    submitBtn.addEventListener('click', (e) => {
         const form = document.getElementById('fname');
         const value = form.value.trim();
         const email = document.getElementById('email');
@@ -259,20 +259,21 @@ if(currentPage.includes('contact')){
         const message = document.getElementById('message');
         const messageValue = message.value.trim();
         e.preventDefault();
-        if(value ===''|| emailValue ===''||numberValue===''){
+        if (value === '' || emailValue === '' || numberValue === '') {
             alert('Enter all the details');
             form.focus();
             return;
         }
-        form.value='';
-        email.value='';
-        number.value='';
-        message.value='';
-    
-        submitted.style.display='block';
-        setTimeout(()=>{
-            submitted.style.display='none';
-        },2000);
+
+
+        submitted.style.display = 'block';
+        setTimeout(() => {
+            submitted.style.display = 'none';
+            form.value = '';
+            email.value = '';
+            number.value = '';
+            message.value = '';
+        }, 2000);
     });
 }
 
